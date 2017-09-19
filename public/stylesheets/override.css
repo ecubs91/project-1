@@ -1,0 +1,33 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00b7ff;
+}
+.navbar{
+	margin-bottom:0px !important;
+}
+
+#errormsg {
+	display: none;
+}
+
+.postingdiv{
+	overflow:hidden;	
+	white-space: nowrap; 
+	text-overflow: ellipsis; 
+	padding: 50px; 
+	padding-top: 10px; 
+	padding-bottom: 20px; 
+	border-radius: 5px;
+}
+
+.postingdiv:hover{
+	background-color:#eaeaea; 
+}
+
+.postingcontent{
+	overflow: hidden !important; 
+	text-overflow: ellipsis; 
+	white-space: nowrap;
+}

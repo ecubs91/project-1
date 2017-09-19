@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  .container
+    #{data[0].title}
+    .row
+      .col-sm-3(style='margin-top: 70px;')
+        #accordion.panel-group
+          #math.panel.panel-default
+            .panel-heading
+              h4.panel-title
+                a(data-toggle='collapse', data-parent='#accordion', href='https://projectzecta.herokuapp.com/resources?category=1')
+                  | MATHEMATICS
+          #sciences.panel.panel-default
+            .panel-heading
+              h4.panel-title
+                a(data-toggle='collapse', data-parent='#accordion', href='https://projectzecta.herokuapp.com/resources?category=2')
+                  | SCIENCES
+          #humanities.panel.panel-default
+            .panel-heading
+              h4.panel-title
+                a(data-toggle='collapse', data-parent='#accordion', href='./resources?category=3')
+                  | HUMANITIES
+          #languages.panel.panel-default
+            .panel-heading
+              h4.panel-title
+                a(data-toggle='collapse', data-parent='#accordion', href='/resources?category=4')
+                  | LANGUAGES
+      .col-sm-9(style='margin-top:70px;margin-bottom:50px;')
+        each val in data
+          h1.text-primary #{val.title}
+          h4.text-primary #{val.poster_name}
+          h5.text-primary #{val.dateposted}
+          p
+            |#{val.content}

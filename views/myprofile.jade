@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  .container
+    .row(style='margin-top:50px; margin-bottom:100px;')        
+      .col-xs-12.col-sm-8.col-md-6.col-sm-offset-2.col-md-offset-3
+        form(role='form', method='POST', action='changepassword')
+          .text-center
+            img(src='images/user.png', width='100', height='100')
+          .text-center(style='margin-top:20px; margin-bottom:20px;')
+            h4.text-primary
+              Your username: #{user_id}
+            h4.text-primary
+              Your email: #{email}
+          hr.colorgraph
+          .form-group
+            input#currpw.form-control.input-lg(type='password', name='currpw', placeholder='Current password')
+          .form-group
+            input#newpw.form-control.input-lg(type='password', name='newpw', placeholder='Type new password')
+          .row
+            .col-xs-6.col-sm-6.col-md-6(style='width:100%')
+              button.btn.btn-info.btn-block.btn-lg(type='submit', value='Change Password') Change Password
+          if message
+            p(style='margin-top: 20px; font-size: 20px; color: #29d498;')
+              |Password changed successfully. 

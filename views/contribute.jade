@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  #customrow.row
+    .span6
+      form(role='form', method='POST', action='contribute')
+        h2
+          i.fa.fa-paper-plane-o
+          |  Share your Resources
+        hr
+        h4
+          i.fa.fa-paper-plane-o
+          |  Category:
+        select#category.form-control.form-control-lg(name='category')
+          option Mathematics
+          option Sciences
+          option Languages
+          option Humanities
+        h4
+          i.fa.fa-paper-plane-o
+          |  Title:
+        input#title.form-control.form-control-lg(type='text', name='title')
+        h4
+          i.fa.fa-paper-plane-o
+          |  Content:        
+        textarea#contents.form-control(rows='3').form-control-lg(type='text', name='contents')
+        br
+        button.btn.btn-primary(type='submit')
+          i.fa.fa-reply
+          |  Submit
+  style.
+    #customrow{
+    margin:0 auto;
+    width:66.6%;
+    padding-top:50px;
+    padding-bottom:210px;
+    }

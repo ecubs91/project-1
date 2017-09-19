@@ -1,0 +1,27 @@
+nav.navbar.navbar-inverse.navbar-static-top
+  .container
+    form.navbar-nav
+      #abt.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li
+            a(href='/') Home 
+          li
+            a(href='/#aboutUs') About Us
+          li
+            a(href='/contribute') Contribute
+          li
+            a(href='/resources?category=0') Resources
+          if email
+            li
+              a(href='/logout') Log Out
+            li
+              a(href='/myprofile') My Profile
+          else 
+            li
+              a(href='/login') Login
+            li
+              a(href='/register') Register
+    form.navbar-form.navbar-right(method='POST' action='search')
+      .form-group
+        input.form-control(type='text', placeholder='Type in Keywords', name='keyword')
+      button.btn.btn-info(type='submit', style='margin-left:6px;') Search

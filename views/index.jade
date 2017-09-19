@@ -1,0 +1,188 @@
+extends layout
+
+block content
+    #myCarousel.carousel.slide(data-ride='carousel')
+      // Indicators
+      ol.carousel-indicators
+        li.active(data-target='#myCarousel', data-slide-to='0')
+        li(data-target='#myCarousel', data-slide-to='1')
+        li(data-target='#myCarousel', data-slide-to='2')
+      // Wrapper for slides
+      .carousel-inner(role='listbox')
+        .item.active
+          img(src='../images/bha.jpg')
+          .carousel-caption
+            h3 Branksome Hall Asia
+            p
+              | At Branksome Hall Asia, girls take center stage as they learn and grow. We challenge and inspire girls to love learning and shape a better world.
+        .item
+          img(src='../images/kis.jpg')
+          .carousel-caption
+            h3 Korean International School
+            p
+              | Korean International School today stands at the forefront of international education in Korea. KIS emphasizes intellectual inquisitiveness, critical thinking, creative expression, physical well being, respect for others, and integrity in all things.
+        .item
+          img(src='../images/nlcs.jpg')
+          .carousel-caption
+            h3 North London Collegiate School Jeju
+            p
+              | NLCS Jeju has become, in a short period of time, a reference for excellent international education in Asia, providing an aspirational academic education taught by highly qualified, knowledgeable and inspiring teachers through interactive, thought-provoking lessons.
+      // Left and right controls
+      a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+        span.sr-only Previous
+      a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
+        span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+        span.sr-only Next
+    br
+    br
+    br
+    .container
+      .row
+        .col-sm-6.col-md-4
+          .thumbnail
+            img(src='../images/oxford.jpg')
+            .caption
+              h3 Oxford Universtiy
+              p This is Oxford University, Biochemistry
+              p
+                | The first time I decided that #{useremail} I really wanted to study a Mathematics degree was after reading Simon Singh’s ‘Fermat’s Last Theorem’. I was captivated by his description of Andrew Wiles’ struggle to prove one of the most di!cult problems in Mathematics. Besides reading about Wiles’ remarkable perseverance and dedication, two important...
+              p
+                a.btn.btn-primary(href='#', role='button') Detail
+                a.btn.btn-default(href='#', role='button') Find Out
+        .col-sm-6.col-md-4
+          .thumbnail
+            img(src='../images/law.jpg')
+            .caption
+              h3 Oxford Universtiy
+              p This is Oxford University, Law University.
+              p
+                | Arguably, this is an age where societal development is closely linked with advances in science and technology. Things we take for granted, such as drugs, capture my curiosity. This is because our manipulation of them is within the limits of our knowledge on the complexity of life. Therefore progress is largely dependent on explorations...
+              p
+                a.btn.btn-primary(href='#', role='button') Detail
+                a.btn.btn-default(href='#', role='button') Find Out
+        .col-sm-6.col-md-4
+          .thumbnail
+            img(src='../images/cambridge.jpg')
+            .caption
+              h3 Cambridge Universtiy
+              p This is Cambridge University. Press any button below to learn more
+              p
+                | Among the most promising universities in America, my choice for Hong Kong University of Science and Technology is obvious. Having geographically advantageous location, numerous research and scholarship opportunities, and all-english classes could be my reasons for applying to HKUST, but my strongest appeal toward HKUST is in its quality...
+              p
+                a.btn.btn-primary(href='#', role='button') Detail
+                a.btn.btn-default(href='#', role='button') Find Out
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    .container
+      h2
+        a(name='aboutUs') About Us
+      br
+      br
+    .container
+      .row
+        .col-md-1
+        .col-md-5
+          .thumbnail
+            img.img-circle(src='../images/harry.jpg', data-toggle='modal', data-target='.bs-example-modal-lg', style='width: 70%; padding-top: 10px; padding-bottom: 10px')
+            .modal.fade.bs-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel')
+              .modal-dialog.modal-lg(role='document')
+                .modal-content(style='padding-top: 30px; padding-bottom: 30px')
+                  div(align='center')
+                    iframe(width='560', height='315', src='https://www.youtube.com/embed/0K3o8hFuNEw', frameborder='0', allowfullscreen='')
+            .caption
+              p(style='padding-left: 10px; padding-top: 10px;')
+                b Harry Lee, Mentor
+                br
+                | iGCSE, IB at Wellington College, UK
+                br
+                | Enthusiastic biologist
+                br
+                | New Age Pianist
+              button#hide.btn.btn-info Hide
+              button#show.btn.btn-default Show
+              j(text-style='padding-left: 10px; padding-top: 10px;')
+                br
+                br
+                img(src='../images/kakao.png', style='width:30px;height:30px;')
+                |   ecubs91
+        .col-md-5
+          .thumbnail
+            img.img-circle(src='../images/chaeun.jpg', data-toggle='modal', data-target='.bs-example-modal-lg', style='width: 70%; padding-top: 10px; padding-bottom: 10px')
+            .modal.fade.bs-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel')
+              .modal-dialog.modal-lg(role='document')
+                .modal-content(style='padding-top: 30px; padding-bottom: 30px')
+                  div(align='center')
+                    iframe(width='560', height='315', src='https://www.youtube.com/embed/u9prcUCHlqM', frameborder='0', allowfullscreen='')
+            .caption
+              p(style='padding-left: 10px; padding-top: 10px;')
+                b Chaeeun Her, Designer
+                br
+                | IGCSE at North London Collegiate School Jeju
+                br
+                | Enthusiastic in biology & geography
+                br
+                | Photographer
+              button#hide1.btn.btn-info Hide
+              button#show1.btn.btn-default Show
+              k(style='padding-left: 10px; padding-top: 10px;')
+                br
+                br
+                img(src='../images/kakao.png', style='width:30px;height:30px;')
+                |   angelce
+    .container
+      .row
+        .col-md-1
+        .col-md-5
+          .thumbnail
+            img.img-circle(src='../images/nharae.jpg', data-toggle='modal', data-target='.bs-example-modal-lg', style='width: 70%; padding-top: 10px; padding-bottom: 10px')
+            .modal.fade.bs-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel')
+              .modal-dialog.modal-lg(role='document')
+                .modal-content(style='padding-top: 30px; padding-bottom: 30px')
+                  div(align='center')
+                    iframe(width='560', height='315', src='https://www.youtube.com/embed/IkOK8tdEsFY', frameborder='0', allowfullscreen='')
+            .caption
+              p(style='padding-left: 10px; padding-top: 10px;')
+                b Nharae Lee, Programmer
+                br
+                | MYP at Branksome Hall Asia, Jeju
+                br
+                | Passionate with CS
+                br
+                | Game Soundtrack Pianist and Violist
+              button#hide2.btn.btn-info Hide
+              button#show2.btn.btn-default Show
+              l(style='padding-left: 10px; padding-top: 10px;')
+                br
+                br
+                img(src='../images/kakao.png', style='width:30px;height:30px;')
+                |   smiletoo
+        .col-md-5
+          .thumbnail
+            img.img-circle(src='../images/jiwoo.jpg', data-toggle='modal', data-target='.bs-example-modal-lg', style='width: 70%; padding-top: 10px; padding-bottom: 10px')
+            .modal.fade.bs-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel')
+              .modal-dialog.modal-lg(role='document')
+                .modal-content(style='padding-top: 30px; padding-bottom: 30px')
+                  div(align='center')
+                    iframe(width='853', height='480', src='//www.youtube.com/embed/IkOK8tdEsFY?playlist=IkOK8tdEsFY&loop=1&showinfo=0&fs=0&rel=0&theme=light', frameborder='0', allowfullscreen='')
+            .caption
+              p(style='padding-left: 10px; padding-top: 10px;')
+                b Jeewoo Park, Programmer
+                br
+                | IGCSE at North London Collegiate School Jeju
+                br
+                | Passionate in CS and Physics
+                br
+                | NLCS JEJU Cellist
+              button#hide3.btn.btn-info Hide
+              button#show3.btn.btn-default Show
+              m(style='padding-left: 10px; padding-top: 10px;')
+                br
+                br
+                img(src='../images/kakao.png', style='width:30px;height:30px;')
+                |   jed21
